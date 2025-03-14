@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Mio Sito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Benvenuto nel mio sito!</h1>
-    <p>Qui troverai i miei racconti e progetti.</p>
+<body class="bg-gray-100">
+    <!-- Immagine con effetto parallasse -->
+    <div class="parallax"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Il Mio Sito</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Racconti</a></li>
+                <li><a href="#" class="hover:underline">Progetti</a></li>
+                <li><a href="#" class="hover:underline">YouTube</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Immagine sotto la navbar -->
+    <div class="w-full">
+        <img src="https://via.placeholder.com/1200x400" alt="Immagine di copertina" class="w-full h-64 object-cover">
+    </div>
 </body>
 </html>
