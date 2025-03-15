@@ -26,7 +26,7 @@ header {
 }
 
 header .parallax {
-    background-image: url('download.jpg'); /* Sostituisci con il percorso corretto */
+    background-image: url('../download.jpg'); /* Sostituisci con il percorso corretto */
     height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -148,7 +148,7 @@ section#home {
 
 .parallax {
     position: relative;
-    background-image: url('BlenderNDS.png'); /* Sostituisci con il percorso corretto */
+    background-image: url('../BlenderNDS.png'); /* Sostituisci con il percorso corretto */
     height: 400px;
     background-attachment: fixed;
     background-position: center;
