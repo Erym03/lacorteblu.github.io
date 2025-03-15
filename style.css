@@ -146,7 +146,6 @@ section#home {
     font-size: 1.2em;
 }
 
-/* Stile per la sezione parallasse */
 .parallax {
     position: relative;
     background-image: url('/BlenderNDS.png'); /* Sostituisci con il percorso corretto */
@@ -157,7 +156,23 @@ section#home {
     display: flex;
     justify-content: center;
     align-items: center;
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 100%, 
+        95% 95%, /* Gradino 1 */
+        90% 100%, 85% 90%, /* Gradino 2 */
+        80% 100%, 75% 90%, /* Gradino 3 */
+        70% 100%, 65% 90%, /* Gradino 4 */
+        60% 100%, 55% 90%, /* Gradino 5 */
+        50% 100%, 45% 90%, /* Gradino 6 */
+        40% 100%, 35% 90%, /* Gradino 7 */
+        30% 100%, 25% 90%, /* Gradino 8 */
+        20% 100%, 15% 90%, /* Gradino 9 */
+        10% 100%, 5% 90%, /* Gradino 10 */
+        0% 100%
+    );
 }
+
+
 
 /* Riquadro "Tecnologia" dentro la parallasse */
 .tech-box {
@@ -168,6 +183,15 @@ section#home {
     font-size: 1em;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease, font-size 0.3s ease; /* Aggiungi una transizione fluida */
+}
+
+/* Effetto quando il mouse passa sopra il techbox */
+.tech-box:hover {
+    transform: scale(1.1); /* Ingrandisce il titolo al 110% */
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
+    text-shadow: 0 4px 15px #FFEB00; /* Aggiunge un'ombra intorno all'immagine */
 }
 
 
