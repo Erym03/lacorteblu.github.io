@@ -1,9 +1,8 @@
 /*
-Palette
-Scuro #000957
-Medio #344CB7
-Chiaro #577BC1
-Giallo #FFEB00
+    blu scuro #091057
+    blu chiaro #024CAA
+    arancione #EC8305
+    grigio chiaro #DBD3D3
 */
 
 /* Reset di base */
@@ -16,8 +15,8 @@ Giallo #FFEB00
 /* Body e font principale */
 body {
     font-family: 'Arial', sans-serif; /* Font leggibile per il corpo */
-    color: #E5E7EB;
-    background-color: #000957;
+    color: #DBD3D3;
+    background-color: #091057;
 }
 
 /* Header */
@@ -26,7 +25,7 @@ header {
 }
 
 header .parallax {
-    background-image: url('../download.jpg'); /* Sostituisci con il percorso corretto */
+    background-image: url('../Images/Background.jpg'); /* Sostituisci con il percorso corretto */
     height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -40,7 +39,7 @@ header .parallax {
 header h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 3em;
-    color: #FFEB00; /* Giallo per il titolo */
+    color: #EC8305; /* Giallo per il titolo */
     transition: transform 0.3s ease, text-shadow 0.3s ease; /* Aggiungi transizione fluida */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
 }
@@ -76,14 +75,16 @@ header h1:hover {
 
 /* Navbar */
 nav {
-    background-color: #000957;
+    background-color: #091057;
+    font-family: 'Press Start 2P', cursive;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    margin-top: 15px;
+    padding: 25px;
 }
 
 nav ul li {
@@ -92,14 +93,19 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #FFEB00; /* Giallo per i link */
+    color: #EC8305; /* Giallo per i link */
     font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi una transizione fluida */
+}
+
+nav a:hover {
+    text-shadow: 0 0px 15px #EC8305; /* Aggiunge un'ombra intorno all'immagine */
 }
 
 /* Sezione Home */
 section#home {
     padding: 40px;
-    background-color: #344CB7;
+    background-color: #024CAA;
 }
 
 .container {
@@ -138,7 +144,7 @@ section#home {
 .description h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
-    color: #E5E7EB;
+    color: #DBD3D3;
 }
 
 .description p {
@@ -148,7 +154,7 @@ section#home {
 
 .parallax {
     position: relative;
-    background-image: url('../BlenderNDS.png'); /* Sostituisci con il percorso corretto */
+    background-image: url('../Images/BlenderNDS.png'); /* Sostituisci con il percorso corretto */
     height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -158,7 +164,7 @@ section#home {
     align-items: center;
     clip-path: polygon(
         0% 0%, 100% 0%, 100% 100%, 
-        95% 95%, /* Gradino 1 */
+        95% 90%, /* Gradino 1 */
         90% 100%, 85% 90%, /* Gradino 2 */
         80% 100%, 75% 90%, /* Gradino 3 */
         70% 100%, 65% 90%, /* Gradino 4 */
@@ -178,7 +184,7 @@ section#home {
 .tech-box {
     position: absolute;
     background: #000957; /* Sfondo scuro trasparente */
-    color: #FFEB00; /* Testo giallo */
+    color: #EC8305; /* Testo giallo */
     padding: 20px 40px;
     font-size: 1em;
     font-family: 'Press Start 2P', cursive;
@@ -191,13 +197,13 @@ section#home {
     transform: scale(1.1); /* Ingrandisce il titolo al 110% */
     font-size: 1.1em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
-    text-shadow: 0 4px 15px #FFEB00; /* Aggiunge un'ombra intorno all'immagine */
+    text-shadow: 0 0px 15px #EC8305; /* Aggiunge un'ombra intorno all'immagine */
 }
 
 
 /* Sezione video */
 #video-section {
-    background-color: #344CB7;
+    background-color: #024CAA;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -245,8 +251,8 @@ section#home {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000957;
-    color: #E5E7EB;
+    background-color: #091057;
+    color: #EC8305;
 }
 
 footer p {
