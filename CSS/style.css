@@ -25,10 +25,10 @@ header {
 }
 
 header .parallax {
-    background-image: url('../Images/Background.jpg'); /* Sostituisci con il percorso corretto */
-    height: 400px;
+    background-image: url('../Images/BG.png'); /* Sostituisci con il percorso corretto */
+    height: 1100px; /*400 sarebbe l'ideale, allungare l'immagine in larghezza*/
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     display: flex;
     justify-content: center;
