@@ -25,14 +25,16 @@ header {
 }
 
 header .parallax {
-    background-image: url('../Images/BG.png'); /* Sostituisci con il percorso corretto */
+    background-image: url('../Images/Castellos.gif'); /* Sostituisci con il percorso corretto */
     height: 1100px; /*400 sarebbe l'ideale, allungare l'immagine in larghezza*/
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Sposta il contenuto verso l'alto */
+    padding-top: 200px; /* Aggiunge spazio sopra */
+    
 }
 
 /* Effetto hover per il titolo principale h1 */
@@ -155,7 +157,7 @@ section#home {
 .parallax {
     position: relative;
     background-image: url('../Images/BlenderNDS.png'); /* Sostituisci con il percorso corretto */
-    height: 400px;
+    height: 450px;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
