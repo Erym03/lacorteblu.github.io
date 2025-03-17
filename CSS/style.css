@@ -26,7 +26,7 @@ header {
 
 header .parallax {
     background-image: url('../Images/Castellos.gif'); /* Sostituisci con il percorso corretto */
-    height: 1100px; /*400 sarebbe l'ideale, allungare l'immagine in larghezza*/
+    height: 1000px; /*400 sarebbe l'ideale, allungare l'immagine in larghezza*/
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
@@ -46,8 +46,24 @@ header h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
 }
 
+/* Effetto hover per il titolo principale h2 */
+header h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #EC8305; /* Giallo per il titolo */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Aggiungi transizione fluida */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
+    margin-top: 20px;
+}
+
 /* Effetto quando il mouse passa sopra h1 */
 header h1:hover {
+    transform: scale(1.1); /* Ingrandisce il titolo al 110% */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Aggiunge un'ombra al testo */
+}
+
+/* Effetto quando il mouse passa sopra h1 */
+header h2:hover {
     transform: scale(1.1); /* Ingrandisce il titolo al 110% */
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8); /* Aggiunge un'ombra al testo */
 }
@@ -79,6 +95,7 @@ header h1:hover {
 nav {
     background-color: #091057;
     font-family: 'Press Start 2P', cursive;
+    
 }
 
 nav ul {
@@ -87,10 +104,12 @@ nav ul {
     justify-content: center;
     margin-top: 15px;
     padding: 25px;
+
 }
 
 nav ul li {
     margin: 0 20px;
+    
 }
 
 nav a {
@@ -129,12 +148,32 @@ section#home {
     width: 400px;
     height: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi una transizione fluida */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
 }
 
 /* Effetto quando il mouse passa sopra */
 .aboutme img:hover {
     transform: scale(1.1); /* Ingrandisce l'immagine al 110% */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
+    
+}
+
+.aboutme2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px
+}
+
+/* Effetto hover per l'immagine */
+.aboutme2 img {
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi una transizione fluida */
+}
+
+/* Effetto quando il mouse passa sopra */
+.aboutme2 img:hover {
+    transform: scale(1.2); /* Ingrandisce l'immagine al 110% */
+    
 }
 
 
@@ -156,7 +195,7 @@ section#home {
 
 .parallax {
     position: relative;
-    background-image: url('../Images/BlenderNDS.png'); /* Sostituisci con il percorso corretto */
+    background-image: url('../Images/Forest.png'); /* Sostituisci con il percorso corretto */
     height: 450px;
     background-attachment: fixed;
     background-position: center;
@@ -164,22 +203,19 @@ section#home {
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(
-        0% 0%, 100% 0%, 100% 100%, 
-        95% 90%, /* Gradino 1 */
-        90% 100%, 85% 90%, /* Gradino 2 */
-        80% 100%, 75% 90%, /* Gradino 3 */
-        70% 100%, 65% 90%, /* Gradino 4 */
-        60% 100%, 55% 90%, /* Gradino 5 */
-        50% 100%, 45% 90%, /* Gradino 6 */
-        40% 100%, 35% 90%, /* Gradino 7 */
-        30% 100%, 25% 90%, /* Gradino 8 */
-        20% 100%, 15% 90%, /* Gradino 9 */
-        10% 100%, 5% 90%, /* Gradino 10 */
-        0% 100%
-    );
 }
 
+.parallax2 {
+    position: relative;
+    background-image: url('../Images/Mountains.jpg'); /* Sostituisci con il percorso corretto */
+    height: 450px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* Riquadro "Tecnologia" dentro la parallasse */
@@ -192,13 +228,13 @@ section#home {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease, font-size 0.3s ease; /* Aggiungi una transizione fluida */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
 }
 
 /* Effetto quando il mouse passa sopra il techbox */
 .tech-box:hover {
     transform: scale(1.1); /* Ingrandisce il titolo al 110% */
     font-size: 1.1em;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
     text-shadow: 0 0px 15px #EC8305; /* Aggiunge un'ombra intorno all'immagine */
 }
 
@@ -224,12 +260,12 @@ section#home {
 .video-container iframe {
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi una transizione fluida */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
 }
 
 /* Effetto quando il mouse passa sopra */
 .video-container iframe:hover {
     transform: scale(1.1); /* Ingrandisce l'immagine al 110% */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 1); /* Aggiunge un'ombra intorno all'immagine */
 }
 
 .video-description {
