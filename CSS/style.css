@@ -329,6 +329,7 @@ footer p {
     font-size: 3rem;
     color: #091057;
     margin-bottom: 50px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .stories-grid {
@@ -406,4 +407,43 @@ footer p {
 
 .read-button:hover {
     transform: scale(1.1);
+}
+
+
+
+/*                  PAGINA PROGETTI             */
+
+.pj-card {
+    background-color: #091057;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.541);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px; /* facoltativo, per un tocco più elegante */
+}
+
+.pj-card:hover {
+    transform: scale(1.05);
+}
+
+
+.pj-card img {
+    width: 450px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.pj-card h2 {
+    color: #DBD3D3;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.pj-card .genre {
+    color: #EC8305;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
