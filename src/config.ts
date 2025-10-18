@@ -125,10 +125,10 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: false, // Abilita sfondo a schermo intero (valido solo senza Banner)
 	src: {
 		desktop: [
-			"/assets/desktop-banner/d1.webp",
+			"assets/desktop-banner/d1.webp",
 		],
 		mobile: [
-			"/assets/mobile-banner/m1.webp",
+			"assets/mobile-banner/m1.webp",
 		],
 	},
 	position: "center", // Posizione sfondo
