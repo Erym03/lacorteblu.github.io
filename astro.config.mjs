@@ -27,9 +27,9 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
-	site: "https://demo-firefly.netlify.app/",
-
-	base: "/",
+	site: 'https://erym03.github.io/lacorteblu.github.io/',
+  	base: '/lacorteblu.github.io/',
+  	outDir: 'dist',
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
