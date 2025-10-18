@@ -28,7 +28,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://erym03.github.io/lacorteblu.github.io",
-	base: "/lacorteblu.github.io/",
+	base: "/",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
