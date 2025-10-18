@@ -1,47 +1,50 @@
-# Chi sono / About Me
+# About This Site
+
+This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
+
+::github{repo="matsuzaka-yuki/Mizuki"}
+
+## 🌟 Theme Features
+
+### 🎨 Design & User Experience
+- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
+- **Fully Responsive** - Optimized for all devices from mobile to desktop
+- **Dark/Light Mode** - Automatic theme switching with smooth transitions
+- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
+- **Smooth Animations** - Fluid page transitions and interactive elements
+
+### 🔍 Content & Search
+- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
+- **Enhanced Markdown** - Extended syntax with code highlighting and math support
+- **Interactive Table of Contents** - Auto-scroll navigation for long articles
+- **RSS Feed Generation** - Stay updated with automatic feed generation
+- **Reading Time Estimation** - Know how long articles take to read
+- **Post Categorization** - Organize content with tags and categories
 
 
-Benvenuti nella **Corte Blu**!  
-Mi chiamo **Emilio Cardaropoli**, sono **game developer** e **scrittore fantasy**.  
-In questo blog condivido i miei progetti creativi, che spaziano dai videogiochi alle storie che scrivo.
 
+### 📱 Special Pages
+- **Anime Tracking Page** - Track your anime watching progress with ratings
+- **Friends Links Page** - Showcase friend websites with beautiful cards
+- **Diary/Moments Page** - Share life moments like social media posts
+- **Archive Page** - Organized timeline view of all posts
+- **About Page** - Customizable personal introduction (this page!)
+
+### 🛠 Technical Features
+- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
+- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
+- **Image Optimization** - PhotoSwipe gallery with lazy loading
+- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
+- **Performance Optimized** - Fast loading with caching and optimization
+- **Comment System Ready** - Integration support for Twikoo comments
+
+### 🎯 Advanced Markdown Features
+- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
+- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
+- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
+- **Syntax Highlighting** - Advanced code highlighting with line numbers
+- **Copy Code Buttons** - Easy code copying functionality
 
 ---
 
-## Cosa faccio
-
-### 🎮 Game Development
-- Creo **videogiochi 2D e 3D** usando diversi linguaggi di programmazione e motori grafici.
-- Studio Gamedesign
-- Realizzo **remake e prototipi** di giochi classici per imparare e condividere conoscenze.
-- Documento tutto il mio lavoro nei social
-
-<iframe width="80%" height="400" src="https://www.youtube.com/embed/FEueiN-wdCI?si=J4NKmnTiWgMBYjLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-### 📖 Scrittura
-- Autore della saga **"Runefate"**, con il primo libro *"Una Corte di Corvi"*.
-- Racconti fantasy ambientati in mondi originali, con attenzione a lore, magia e personaggi.
----
-
-## Passioni e interessi
-
-- **Fantasy e medievale**, ispirato a Tolkien e opere classiche.
-- **Pixel art e modellazione stylized**.
-- Creazione di **mondi interattivi e narrazioni immersive**.
-- Video game development, dall’idea alla pubblicazione.
-
----
-
-## Contatti
-
-Se vuoi seguire i miei progetti o contattarmi:  
-
-- 💻 **YouTube**: [LacorteBlu](https://www.youtube.com/@lacorteblu)  
-- 📸 **Instagram**: [LacorteBlu](https://www.instagram.com/lacorteblu)  
-- 🐙 **GitHub**: [Emilio Cardaropoli](https://github.com/erym03)  
-
----
-
-Spero che questo blog ti ispiri e ti dia spunti interessanti.  
-Benvenuto nella **Corte Blu**, dove mondi di pixel e parole si incontrano!
+*Built with ❤️ using Astro and inspired by modern web design principles.*

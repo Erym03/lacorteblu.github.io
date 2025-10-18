@@ -1,175 +1,454 @@
 import type {
-  AnnouncementConfig,
-  CommentConfig,
-  ExpressiveCodeConfig,
-  FooterConfig,
-  LicenseConfig,
-  ProfileConfig,
-  SakuraConfig,
-  SiteConfig,
+	AnnouncementConfig,
+	CommentConfig,
+	ExpressiveCodeConfig,
+	FooterConfig,
+	FullscreenWallpaperConfig,
+	LicenseConfig,
+	MusicPlayerConfig,
+	NavBarConfig,
+	ProfileConfig,
+	SakuraConfig,
+	SidebarLayoutConfig,
+	SiteConfig,
 } from "./types/config";
-import { adConfig1, adConfig2 } from "./config/adConfig";
-import { spineModelConfig, live2dModelConfig } from "./config/pioConfig";
-import { sidebarLayoutConfig } from "./config/sidebarConfig";
-import { fontConfig } from "./config/fontConfig";
+import { LinkPreset } from "./types/config";
 
-// Lingua del sito
-const SITE_LANG = "it";
+
+// Rimosso import di i18n per evitare dipendenze circolari
+
+// Definizione della lingua del sito
+const SITE_LANG = "it"; // Codice lingua, ad esempio: 'en', 'zh_CN', 'ja', ecc.
 
 export const siteConfig: SiteConfig = {
-  title: "LaCorteBlu",
-  subtitle: "Sviluppatore di videogiochi e scrittore fantasy",
-  description:
-    "Portfolio ufficiale di LaCorteBlu, dove convergono mondi di pixel e parole. Dai racconti di 'Una Corte di Corvi' ai progetti di game design e 3D art.",
-  keywords: [
-    "LaCorteBlu",
-    "GameDev",
-    "Pixel Art",
-    "Scrittura Fantasy",
-    "Astro",
-    "Portfolio",
-  ],
+	title: "LaCorteBlu",
+	subtitle: "Emilio Cardaropoli",
 
-  lang: SITE_LANG,
+	lang: SITE_LANG,
 
-  themeColor: {
-    hue: 240, // Blu
-    fixed: true,
-    defaultMode: "dark",
-  },
-  
+	themeColor: {
+		hue: 240, // Tonalità del colore principale del tema, da 0 a 360. Es: rosso:0, ciano:200, turchese:250, rosa:345
+		fixed: true, // Nasconde il selettore del colore tema ai visitatori
+	},
 
-  favicon: [
-    {
-      src: "/assets/images/Favicon.png",
-      sizes: "32x32",
-    },
-  ],
+	bangumi: {
+		userId: "your-bangumi-id", // Imposta qui il tuo ID utente Bangumi, puoi usare "sai" come test
+	},
 
-  logoIcon: {
-    type: "image",
-    value: "/assets/images/Avatar.jpg",
-    alt: "LaCorteBlu Logo",
-  },
+	anime: {
+		mode: "local", // Modalità pagina anime: "bangumi" usa l’API Bangumi, "local" usa configurazione locale
+	},
 
-  bangumi: { userId: "" },
+	banner: {
+		enable: true, // Abilita la modalità banner con sfondo
 
-  showLastModified: true,
-  generateOgImages: false,
+		// Supporta una singola immagine o un array. Se l’array > 1, attiva la modalità carosello
+		src: {
+			desktop: [
+				"/assets/desktop-banner/d1.webp",
+				"/assets/desktop-banner/d2.webp",
+				"/assets/desktop-banner/d3.webp",
+				"/assets/desktop-banner/d4.webp",
+				"/assets/desktop-banner/d5.webp",
+				"/assets/desktop-banner/d6.webp",
+				"/assets/desktop-banner/d7.webp",
+				"/assets/desktop-banner/d8.webp",
+			], // Immagini banner desktop
+			mobile: [
+				"/assets/mobile-banner/m1.webp",
+				"/assets/mobile-banner/m2.webp",
+				"/assets/mobile-banner/m3.webp",
+				"/assets/mobile-banner/m4.webp",
+				"/assets/mobile-banner/m5.webp",
+				"/assets/mobile-banner/m6.webp",
+				"/assets/mobile-banner/m7.webp",
+				"/assets/mobile-banner/m8.webp",
+			], // Immagini banner mobile
+		},
 
-  pages: {
-    anime: false,
-    projects: true,
-    timeline: true,
-    skills: true,
-  },
+		position: "center", // Equivalente a object-position, supporta solo 'top', 'center', 'bottom'
 
-  backgroundWallpaper: {
-    enable: true,
-    mode: "banner", //O banner o overlay (sopra o trasparente)
-    src: {
-      desktop: "/assets/images/Castellos.gif",
-      mobile: "/assets/images/bg-dark.jpg",
-    },
-    position: "100% 85%",
-    banner: {
-      homeText: {
-        enable: true,
-        title: "LaCorteBlu",
-        subtitle: [
-          "Emilio Cardaropoli",
-          "Sviluppatore di videogiochi",
-          "Scrittore di Fantasy e Fantascienza",
-          "Sognatore",
-        ],
-        typewriter: {
-          enable: true,
-          speed: 90,
-          deleteSpeed: 50,
-          pauseTime: 2000,
-        },
-      },
-      credit: {
-        enable: { desktop: false, mobile: false },
-        text: { desktop: "", mobile: "" },
-        url: { desktop: "", mobile: "" },
-      },
-      navbar: {
-        transparentMode: "full", //Semi o full
-      },
-      waves: {
-        enable: { desktop: false, mobile: false },
-      },
-    },
-    overlay: {
-      zIndex: -1,
-      opacity: 0.8,
-      blur: 1,
-    },
-  },
+		carousel: {
+			enable: true, // Se true: abilita il carosello per immagini multiple. Se false: mostra una a caso
+			interval: 1.5, // Intervallo del carosello (secondi)
+		},
 
-  toc: { enable: true, depth: 3 },
-  font: fontConfig,
+		// Supporto per API PicFlow (API immagini intelligenti)
+		imageApi: {
+			enable: false, // Abilita API immagini
+			url: "http://domain.com/api_v2.php?format=text&count=4", // URL API, ritorna testo con link di immagini
+		},
+		// Deve usare il formato di ritorno "Text" da PicFlow API (format=text)
+		// Progetto API: https://github.com/matsuzaka-yuki/PicFlow-API
+		// Configurala tu stesso se necessario
+
+		homeText: {
+			enable: true, // Mostra testo personalizzato nella home
+			title: "LaCorteBlu", // Titolo principale sul banner
+			subtitle: [
+				"Emilio Cardaropoli",
+				"Game Developer",
+				"Scrittore",
+				"Sognatore",
+			],
+			typewriter: {
+				enable: true, // Effetto macchina da scrivere sul sottotitolo
+				speed: 90, // Velocità di scrittura (ms)
+				deleteSpeed: 50, // Velocità di cancellazione (ms)
+				pauseTime: 2000, // Pausa dopo il testo completo (ms)
+			},
+		},
+
+		credit: {
+			enable: false, // Mostra testo di credito per le immagini del banner
+			text: "Descrizione", // Testo del credito
+			url: "", // (Opzionale) Link alla fonte o all’artista
+		},
+
+		navbar: {
+			transparentMode: "semifull", // Modalità trasparenza navbar: "semi", "full", "semifull" (dinamica)
+		},
+	},
+	toc: {
+		enable: true, // Abilita il sommario (Table of Contents)
+		depth: 3, // Profondità TOC, da 1 a 6 (es: 2 mostra h1 e h2)
+	},
+	generateOgImages: false, // Genera immagini OpenGraph. Sconsigliato in locale (rallenta molto)
+	favicon: [
+		// Lascia vuoto per usare l’icona predefinita
+		// {
+		//   src: '/favicon/icon.png',
+		//   theme: 'light',
+		//   sizes: '32x32',
+		// }
+	],
+
+	// Configurazione dei font
+	font: {
+		zenMaruGothic: {
+			enable: true, // Font rotondo, adatto per giapponese e inglese (meno per cinese)
+		},
+		hanalei: {
+			enable: false, // Font Hanalei, adatto per il cinese
+		},
+	},
+	showLastModified: true, // Mostra la data di "ultima modifica" negli articoli
+};
+
+export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
+	enable: true, // Abilita sfondo a schermo intero (valido solo senza Banner)
+	src: {
+		desktop: [
+			"/assets/desktop-banner/d1.webp",
+			"/assets/desktop-banner/d2.webp",
+			"/assets/desktop-banner/d3.webp",
+			"/assets/desktop-banner/d4.webp",
+			"/assets/desktop-banner/d5.webp",
+			"/assets/desktop-banner/d6.webp",
+			"/assets/desktop-banner/d7.webp",
+			"/assets/desktop-banner/d8.webp",
+		],
+		mobile: [
+			"/assets/mobile-banner/m1.webp",
+			"/assets/mobile-banner/m2.webp",
+			"/assets/mobile-banner/m3.webp",
+			"/assets/mobile-banner/m4.webp",
+			"/assets/mobile-banner/m5.webp",
+			"/assets/mobile-banner/m6.webp",
+			"/assets/mobile-banner/m7.webp",
+			"/assets/mobile-banner/m8.webp",
+		],
+	},
+	position: "center", // Posizione sfondo
+	carousel: {
+		enable: true, // Abilita carosello
+		interval: 1, // Intervallo (secondi)
+	},
+	zIndex: -1, // Livello di profondità (dietro agli elementi principali)
+	opacity: 0.8, // Opacità dello sfondo
+	blur: 1, // Livello di sfocatura dello sfondo
+};
+
+export const navBarConfig: NavBarConfig = {
+	links: [
+		LinkPreset.Home,
+		LinkPreset.Archive,
+		// Supporta link personalizzati e menu a più livelli
+		{
+			name: "Link",
+			url: "/links/",
+			icon: "material-symbols:link",
+			children: [
+				{
+					name: "GitHub",
+					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					external: true,
+					icon: "fa6-brands:github",
+				},
+				{
+					name: "Bilibili",
+					url: "https://space.bilibili.com/701864046",
+					external: true,
+					icon: "fa6-brands:bilibili",
+				},
+				{
+					name: "Gitee",
+					url: "https://gitee.com/matsuzakayuki/Mizuki",
+					external: true,
+					icon: "mdi:git",
+				},
+			],
+		},
+		{
+			name: "My",
+			url: "/content/",
+			icon: "material-symbols:person",
+			children: [
+				LinkPreset.Anime,
+				LinkPreset.Diary,
+				{
+					name: "Galleria",
+					url: "/albums/",
+					icon: "material-symbols:photo-library",
+				},
+			],
+		},
+		{
+			name: "Info",
+			url: "/content/",
+			icon: "material-symbols:info",
+			children: [LinkPreset.About, LinkPreset.Friends],
+		},
+		{
+			name: "Altro",
+			url: "#",
+			icon: "material-symbols:more-horiz",
+			children: [
+				{
+					name: "Progetti",
+					url: "/projects/",
+					icon: "material-symbols:work",
+				},
+				{
+					name: "Competenze",
+					url: "/skills/",
+					icon: "material-symbols:psychology",
+				},
+				{
+					name: "Cronologia",
+					url: "/timeline/",
+					icon: "material-symbols:timeline",
+				},
+			],
+		},
+	],
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: "/assets/images/Avatar.jpg",
-  name: "LaCorteBlu",
-  bio: "Ciao! Sono uno sviluppatore di videogiochi e scrittore fantasy. Amo creare mondi, scrivere storie e trasformarle in esperienze interattive.",
-  links: [
-    { name: "YouTube", icon: "fa6-brands:youtube", url: "https://www.youtube.com/@lacorteblu" },
-    { name: "Instagram", icon: "fa6-brands:instagram", url: "https://www.instagram.com/lacorteblu" },
-    { name: "GitHub", icon: "fa6-brands:github", url: "https://github.com/erym03" },
-  ],
+	avatar: "assets/images/avatar.webp", // Percorso relativo a /src. Se inizia con "/", relativo a /public
+	name: "Matsuzaka Yuki",
+	bio: "Il mondo è grande, devi uscire a vederlo",
+	links: [
+		{
+			name: "Bilibili",
+			icon: "fa6-brands:bilibili",
+			url: "https://space.bilibili.com/701864046",
+		},
+		{
+			name: "Gitee",
+			icon: "mdi:git",
+			url: "https://gitee.com/matsuzakayuki",
+		},
+		{
+			name: "GitHub",
+			icon: "fa6-brands:github",
+			url: "https://github.com/matsuzaka-yuki",
+		},
+		{
+			name: "Discord",
+			icon: "fa6-brands:discord",
+			url: "https://discord.gg/MqW6TcQtVM",
+		},
+	],
 };
 
 export const licenseConfig: LicenseConfig = {
-  enable: true,
-  name: "CC BY-NC-SA 4.0",
-  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+	enable: true,
+	name: "CC BY-NC-SA 4.0",
+	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
-  theme: "github-dark",
+	// Nota: alcuni stili (es. colore di sfondo) sono sovrascritti — vedi astro.config.mjs
+	// Scegli un tema scuro, poiché questo tema supporta solo sfondi scuri
+	theme: "github-dark",
 };
 
 export const commentConfig: CommentConfig = {
-  enable: false,
-  twikoo: { envId: "https://twikoo.vercel.app", lang: "it" },
+	enable: false, // Abilita i commenti. Se false, il componente non verrà mostrato
+	twikoo: {
+		envId: "https://twikoo.vercel.app",
+		lang: "en", // Lingua del sistema di commenti Twikoo
+	},
 };
 
 export const announcementConfig: AnnouncementConfig = {
-  title: "Annuncio",
-  content: "Benvenuto nel mio sito! Questo è un annuncio dimostrativo.",
-  closable: true,
-  link: { enable: true, text: "Scopri di più", url: "/chi-sono/", external: false },
+	title: "Annuncio",
+	content: "Benvenuto nel mio blog! Questo è un annuncio di esempio.",
+	closable: true, // Permette all’utente di chiudere l’annuncio
+	link: {
+		enable: true, // Abilita link
+		text: "Scopri di più", // Testo del link
+		url: "/about/", // URL del link
+		external: false, // Link interno
+	},
 };
 
-export const footerConfig: FooterConfig = { enable: false };
+export const musicPlayerConfig: MusicPlayerConfig = {
+	enable: true, // Abilita il lettore musicale
+};
+
+export const footerConfig: FooterConfig = {
+	enable: false, // Abilita HTML personalizzato nel footer
+};
+
+// Modifica direttamente FooterConfig.html per aggiungere contenuti personalizzati
+
+/**
+ * Configurazione layout della sidebar
+ * Controlla visibilità, ordine, animazioni e comportamento responsive
+ */
+export const sidebarLayoutConfig: SidebarLayoutConfig = {
+	enable: true, // Abilita la sidebar
+	position: "left", // Posizione: sinistra o destra
+	components: [
+		{
+			type: "profile", // Componente profilo
+			enable: true,
+			order: 1,
+			position: "top",
+			class: "onload-animation",
+			animationDelay: 0,
+		},
+		{
+			type: "announcement", // Componente annunci
+			enable: true,
+			order: 2,
+			position: "top",
+			class: "onload-animation",
+			animationDelay: 50,
+		},
+		{
+			type: "categories", // Componente categorie
+			enable: true,
+			order: 3,
+			position: "sticky",
+			class: "onload-animation",
+			animationDelay: 150,
+			responsive: {
+				collapseThreshold: 5, // Collassa se più di 5 categorie
+			},
+		},
+		{
+			type: "tags", // Componente tag
+			enable: true,
+			order: 5,
+			position: "sticky",
+			class: "onload-animation",
+			animationDelay: 250,
+			responsive: {
+				collapseThreshold: 20, // Collassa se più di 20 tag
+			},
+		},
+	],
+
+	defaultAnimation: {
+		enable: true,
+		baseDelay: 0,
+		increment: 50,
+	},
+
+	responsive: {
+		breakpoints: {
+			mobile: 768,
+			tablet: 1024,
+			desktop: 1280,
+		},
+		layout: {
+			mobile: "sidebar",
+			tablet: "sidebar",
+			desktop: "sidebar",
+		},
+	},
+};
 
 export const sakuraConfig: SakuraConfig = {
-  enable: false,
-  sakuraNum: 21,
-  limitTimes: -1,
-  size: { min: 0.5, max: 1.1 },
-  speed: { horizontal: { min: -1.7, max: -1.2 }, vertical: { min: 1.5, max: 2.2 }, rotation: 0.03 },
-  zIndex: 100,
+	enable: false, // Effetto petali di ciliegio disabilitato
+	sakuraNum: 21, // Numero di petali
+	limitTimes: -1, // Numero massimo di cicli (-1 = infinito)
+	size: {
+		min: 0.5, // Dimensione minima (moltiplicatore)
+		max: 1.1, // Dimensione massima
+	},
+	opacity: {
+		min: 0.3,
+		max: 0.9,
+	},
+	speed: {
+		horizontal: {
+			min: -1.7,
+			max: -1.2,
+		},
+		vertical: {
+			min: 1.5,
+			max: 2.2,
+		},
+		rotation: 0.03, // Velocità di rotazione
+		fadeSpeed: 0.03, // Velocità di dissolvenza (non superare l’opacità minima)
+	},
+	zIndex: 100, // Livello di profondità
 };
 
+// Configurazione “Pio” (mascotte sullo schermo)
+export const pioConfig: import("./types/config").PioConfig = {
+	enable: false, // Abilita la mascotte
+	models: ["/pio/models/pio/model.json"], // Percorso del modello
+	position: "left", // Posizione predefinita a sinistra
+	width: 280,
+	height: 250,
+	mode: "draggable", // Modalità trascinabile
+	hiddenOnMobile: true, // Nascosta su dispositivi mobili
+	dialog: {
+		welcome: "Benvenuto sul sito Mizuki!",
+		touch: [
+			"Cosa stai facendo?",
+			"Non toccarmi!",
+			"HENTAI!",
+			"Non farmi questo!",
+		],
+		home: "Clicca qui per tornare alla home!",
+		skin: ["Vuoi vedere il mio nuovo vestito?", "Ti piace il mio nuovo look~"],
+		close: "QWQ A presto~",
+		link: "https://github.com/matsuzaka-yuki/Mizuki",
+	},
+};
+
+// Esportazione delle configurazioni unificate
 export const widgetConfigs = {
-  profile: profileConfig,
-  announcement: announcementConfig,
-  layout: sidebarLayoutConfig,
-  sakura: sakuraConfig,
-  spine: spineModelConfig,
-  live2d: live2dModelConfig,
-  advertisement: adConfig1,
-  advertisement2: adConfig2,
+	profile: profileConfig,
+	announcement: announcementConfig,
+	music: musicPlayerConfig,
+	layout: sidebarLayoutConfig,
+	sakura: sakuraConfig,
+	fullscreenWallpaper: fullscreenWallpaperConfig,
+	pio: pioConfig,
 } as const;
 
 export const umamiConfig = {
-  enabled: false,
-  apiKey: "api_XXXXXXXXXX",
-  baseUrl: "https://api.umami.is",
-  scripts: `<script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>`.trim(),
+	enabled: false, // Abilita le statistiche Umami
+	apiKey: "api_XXXXXXXXXX", // La tua chiave API
+	baseUrl: "https://api.umami.is", // URL API Umami Cloud
+	scripts: `
+<script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>
+  `.trim(), // Script da inserire (non serve aggiungerlo manualmente nel layout)
 } as const;

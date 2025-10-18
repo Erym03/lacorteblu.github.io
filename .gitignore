@@ -1,38 +1,34 @@
-# Build output (non necessario committare, a meno che tu non pubblichi manualmente da dist/)
+# build output
+dist/
+
+# generated types
 .astro/
+
+# dependencies
 node_modules/
 
-# Log files
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment variables
+# environment variables
 .env
 .env.production
 
-# macOS
+# macOS-specific files
 .DS_Store
 
-# IDE
-.idea/
-*.iml
-.vscode/
+.vercel
 
-# Locks (a seconda del gestore pacchetti)
 package-lock.json
-pnpm-lock.yaml
 bun.lockb
 yarn.lock
 
-# Cache locali
-.cache/
+# ide
+.idea
+*.iml
+
+cache/
 fuwari/
-
-# Non ignorare dist/ se vuoi pubblicare GitHub Pages direttamente dal branch principale
-# Se usi un branch separato tipo gh-pages, puoi ignorarlo
-# dist/
-
-# Files di deployment specifici (Vercel, Netlify)
-.vercel/
