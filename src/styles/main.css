@@ -9,22 +9,39 @@
 
 /* 导入 ZenMaruGothic-Medium 字体 */
 @font-face {
-  font-family: 'ZenMaruGothic-Medium';
-  src: url('/assets/font/ZenMaruGothic-Medium.ttf') format('truetype');
+  font-family: 'zenMaruGothic';
+  src: url('/lacorteblu.github.io/assets/font/ZenMaruGothic-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
 }
 
-
+/* Pixel Font */
+@font-face {
+  font-family: "BoldPixel";
+  src: url("/lacorteblu.github.io/assets/font/BoldPixels.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700; /* se è bold */
+  font-display: swap;
+}
 
 /* 导入 Hanalei 字体 */
 @font-face {
 	font-family: "Hanalei";
-	src: url("/assets/font/Hanalei.woff2") format("woff2");
+	src: url("/lacorteblu.github.io/assets/font/Hanalei.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
 }
+
+/* DEFINISCE FUNZIONAMENTO FON */
+h1, h2, h3, .transition-all, .transition {
+  font-family: 'BoldPixel', sans-serif;
+}
+
+body, p, li {
+  font-family: 'ZenMaruGothic', sans-serif;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -37,12 +54,17 @@ html {
 
 /* 当启用 ZenMaruGothic-Medium 字体时应用为全局字体 */
 .zen-maru-gothic-enabled {
-  font-family: 'ZenMaruGothic-Medium', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'ZenMaruGothic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* 当启用 Hanalei 字体时应用为全局字体 */
 .hanalei-enabled {
   font-family: 'Hanalei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Apply your custom font as global font when enabled */
+.boldpixel-enabled {
+    font-family: 'BoldPixel', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* 页面顶部渐变高光效果 */

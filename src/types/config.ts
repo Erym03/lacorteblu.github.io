@@ -15,6 +15,7 @@ export type SiteConfig = {
 		| "th"
 		| "vi"
 		| "tr"
+		| "it"
 		| "id";
 
 	themeColor: {
@@ -22,10 +23,13 @@ export type SiteConfig = {
 		fixed: boolean;
 	};
 
-	// 添加字体配置
+	// Font
 	font: {
+		BoldPixel: {
+			enable: boolean, // Font BoldPixel
+		},
 		zenMaruGothic: {
-			enable: boolean; // 是否使用 ZenMaruGothic-Black 作为全局字体
+			enable: boolean; // Enable global rounded font
 		};
 		hanalei: {
 			enable: boolean; // 是否使用 Hanalei 作为全局字体

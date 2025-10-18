@@ -109,17 +109,22 @@ export const siteConfig: SiteConfig = {
 		// }
 	],
 
-	// Configurazione dei font
+	// Configurazione dei font (si può cambiare anche da CSS per una maggiore precisione)
 	font: {
+		BoldPixel: {
+			enable: false, // Font BoldPixel
+		},
 		zenMaruGothic: {
-			enable: true, // Font rotondo, adatto per giapponese e inglese (meno per cinese)
+			enable: false, // Font rotondo, adatto per giapponese e inglese (meno per cinese)
 		},
 		hanalei: {
-			enable: false, // Font Hanalei, adatto per il cinese
+			enable: false, // Font Hanalei, molto rotondo
 		},
 	},
-	showLastModified: true, // Mostra la data di "ultima modifica" negli articoli
+	showLastModified: false, // Mostra la data di "ultima modifica" negli articoli
 };
+
+
 
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: false, // Abilita sfondo a schermo intero (valido solo senza Banner)
