@@ -33,29 +33,27 @@ export default defineConfig({
 	integrations: [
 		tailwind({
 			nesting: true,
-		}),
 		swup({
-		  theme: false,
-		  animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
-		  containers: ["main"],
-		  smoothScrolling: false, 
-		  cache: true,
-		  preload: false, 
-		  accessibility: true,
-		  updateHead: true,
-		  updateBodyClass: false,
-		  globalInstance: true,
-		  resolveUrl: (url) => url,
-		  animateHistoryBrowsing: false,
-		  skipPopStateHandling: (event) => {
-		    // Salta gestione per anchor link o home page
-		    return (
-		      (event.state && event.state.url && event.state.url.includes("#")) ||
-		      window.location.pathname === "/lacorteblu.github.io/"
-		    );
-		  },
-		});
-
+			theme: false,
+			animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
+			// the default value `transition-` cause transition delay
+			// when the Tailwind class `transition-all` is used
+			containers: ["main"],
+			smoothScrolling: false, // 禁用平滑滚动以提升性能，避免与锚点导航冲突
+			cache: true,
+			preload: false, // 禁用预加载以减少网络请求
+			accessibility: true,
+			updateHead: true,
+			updateBodyClass: false,
+			globalInstance: true,
+			// 滚动相关配置优化
+			resolveUrl: (url) => url,
+			animateHistoryBrowsing: false,
+			skipPopStateHandling: (event) => {
+				// 跳过锚点链接的处理，让浏览器原生处理
+				return event.state && event.state.url && event.state.url.includes("#");
+			},
+		}),
 		icon({
 			include: {
 				"preprocess: vitePreprocess(),": ["*"],
