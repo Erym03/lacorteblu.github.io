@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 	title: "LaCorteBlu",
 	subtitle: "Emilio Cardaropoli",
 
-	lang: SITE_LANG,
+	lang: SITE_LANG as any,
 
 	themeColor: {
 		hue: 240, // Tonalità del colore principale del tema, da 0 a 360. Es: rosso:0, ciano:200, turchese:250, rosa:345
