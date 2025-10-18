@@ -45,31 +45,17 @@ export const siteConfig: SiteConfig = {
 		// Supporta una singola immagine o un array. Se l’array > 1, attiva la modalità carosello
 		src: {
 			desktop: [
-				"/assets/desktop-banner/d1.webp",
-				"/assets/desktop-banner/d2.webp",
-				"/assets/desktop-banner/d3.webp",
-				"/assets/desktop-banner/d4.webp",
-				"/assets/desktop-banner/d5.webp",
-				"/assets/desktop-banner/d6.webp",
-				"/assets/desktop-banner/d7.webp",
-				"/assets/desktop-banner/d8.webp",
+				"/assets/desktop-banner/Castellos.gif",
 			], // Immagini banner desktop
 			mobile: [
-				"/assets/mobile-banner/m1.webp",
-				"/assets/mobile-banner/m2.webp",
-				"/assets/mobile-banner/m3.webp",
-				"/assets/mobile-banner/m4.webp",
-				"/assets/mobile-banner/m5.webp",
-				"/assets/mobile-banner/m6.webp",
-				"/assets/mobile-banner/m7.webp",
-				"/assets/mobile-banner/m8.webp",
+				"/assets/desktop-banner/Castellos.gif",
 			], // Immagini banner mobile
 		},
 
-		position: "center", // Equivalente a object-position, supporta solo 'top', 'center', 'bottom'
+		position: "bottom", // Equivalente a object-position, supporta solo 'top', 'center', 'bottom'
 
 		carousel: {
-			enable: true, // Se true: abilita il carosello per immagini multiple. Se false: mostra una a caso
+			enable: false, // Se true: abilita il carosello per immagini multiple. Se false: mostra una a caso
 			interval: 1.5, // Intervallo del carosello (secondi)
 		},
 
@@ -106,7 +92,7 @@ export const siteConfig: SiteConfig = {
 		},
 
 		navbar: {
-			transparentMode: "semifull", // Modalità trasparenza navbar: "semi", "full", "semifull" (dinamica)
+			transparentMode: "full", // Modalità trasparenza navbar: "semi", "full", "semifull" (dinamica)
 		},
 	},
 	toc: {
@@ -136,7 +122,7 @@ export const siteConfig: SiteConfig = {
 };
 
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
-	enable: true, // Abilita sfondo a schermo intero (valido solo senza Banner)
+	enable: false, // Abilita sfondo a schermo intero (valido solo senza Banner)
 	src: {
 		desktop: [
 			"/assets/desktop-banner/d1.webp",
@@ -214,12 +200,6 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "Info",
-			url: "/content/",
-			icon: "material-symbols:info",
-			children: [LinkPreset.About, LinkPreset.Friends],
-		},
-		{
 			name: "Altro",
 			url: "#",
 			icon: "material-symbols:more-horiz",
@@ -241,13 +221,19 @@ export const navBarConfig: NavBarConfig = {
 				},
 			],
 		},
+		{
+			name: "Info",
+			url: "/content/",
+			icon: "material-symbols:info",
+			children: [LinkPreset.About, LinkPreset.Friends],
+		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // Percorso relativo a /src. Se inizia con "/", relativo a /public
-	name: "Matsuzaka Yuki",
-	bio: "Il mondo è grande, devi uscire a vederlo",
+	avatar: "assets/images/Avatar.jpg", // Percorso relativo a /src. Se inizia con "/", relativo a /public
+	name: "Emilio Cardaropoli",
+	bio: "Gamedeveloper e Scrittore",
 	links: [
 		{
 			name: "Bilibili",
@@ -332,7 +318,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		},
 		{
 			type: "announcement", // Componente annunci
-			enable: true,
+			enable: false,
 			order: 2,
 			position: "top",
 			class: "onload-animation",
