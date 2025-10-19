@@ -75,10 +75,9 @@ export const siteConfig: SiteConfig = {
 				"Emilio Cardaropoli",
 				"Game Developer",
 				"Scrittore",
-				"Sognatore",
 			],
 			typewriter: {
-				enable: true, // Effetto macchina da scrivere sul sottotitolo
+				enable: false, // Effetto macchina da scrivere sul sottotitolo
 				speed: 90, // Velocità di scrittura (ms)
 				deleteSpeed: 50, // Velocità di cancellazione (ms)
 				pauseTime: 2000, // Pausa dopo il testo completo (ms)
@@ -224,22 +223,22 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/Avatar.jpg", // Percorso relativo a /src. Se inizia con "/", relativo a /public
 	name: "Emilio Cardaropoli",
-	bio: "Gamedeveloper e Scrittore",
+	bio: "Game Developer e Scrittore",
 	links: [
 		{
-			name: "Bilibili",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			name: "YouTube",
+			icon: "fa6-brands:youtube",
+			url: "https://www.youtube.com/@lacorteblu",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
+			url: "https://github.com/erym03",
+		},
+		{
+			name: "Itch.io",
+			icon: "mdi:controller-classic",
+			url: "https://erym03.itch.io/",
 		},
 		{
 			name: "Discord",
@@ -248,6 +247,7 @@ export const profileConfig: ProfileConfig = {
 		},
 	],
 };
+
 
 export const licenseConfig: LicenseConfig = {
 	enable: true,
