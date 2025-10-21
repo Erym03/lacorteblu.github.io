@@ -23,7 +23,7 @@ export const projectsData: Project[] = [
 		title: "Trick or Beat",
 		description:
 			"A platform rhythm game developed for Android and Windows",
-		image: "/src/assets/images/Projects/Zucca.png",
+		image: "/lacorteblu.github.io/src/assets/images/Projects/Zucca.png",
 		category: "gamedev",
 		techStack: ["Unity", "C#", "Maya"],
 		status: "completed",
