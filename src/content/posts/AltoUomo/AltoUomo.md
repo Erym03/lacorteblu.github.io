@@ -1,7 +1,7 @@
 ---
-title: Il Pistolero
+title: L'alto uomo e il basso mostro
 published: 2024-05-22
-pinned: true
+pinned: false
 description: I nomadi dell'est iniziano un lungo viaggio verso terre ignote, alla ricerca di un posto da chiamare casa.
 tags: [Dark Fantasy, Fantasy, Racconto breve]
 category: Racconti

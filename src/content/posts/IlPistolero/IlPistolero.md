@@ -1,7 +1,7 @@
 ---
 title: Il Pistolero
 published: 2022-01-20
-pinned: true
+pinned: false
 description: Un silenzioso pistolero vaga tra terre desolate, fino a quando, una notte, non si imbatte in un villaggio sperduto tra i boschi...
 tags: [Dark Fantasy, Fantasy, Racconto breve]
 category: Racconti

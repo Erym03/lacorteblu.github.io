@@ -1,7 +1,7 @@
 ---
 title: Il sig
 published: 2023-02-10
-pinned: true
+pinned: false
 description: Un piccolo villaggio di pescatori viene terrorizzato da una creatura acquatica orrida e violenta. La gente del posto la chiama il sig. Un lavoro perfetto per un Pistolero.
 tags: [Dark Fantasy, Fantasy, Racconto breve]
 category: Racconti

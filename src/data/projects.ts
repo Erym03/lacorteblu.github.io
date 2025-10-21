@@ -6,7 +6,7 @@ export interface Project {
 	title: string;
 	description: string;
 	image: string;
-	category: "web" | "mobile" | "desktop" | "other";
+	category: "gamedev" | "web" | "desktop" | "other";
 	techStack: string[];
 	status: "completed" | "in-progress" | "planned";
 	liveDemo?: string;
@@ -19,74 +19,49 @@ export interface Project {
 
 export const projectsData: Project[] = [
 	{
-		id: "mizuki-blog",
-		title: "Mizuki Blog Theme",
+		id: "TrickOrBeat",
+		title: "Trick or Beat",
 		description:
-			"Modern blog theme developed based on the Astro framework, supporting multilingual, dark mode, and responsive design features.",
-		image: "",
-		category: "web",
-		techStack: ["Astro", "TypeScript", "Tailwind CSS", "Svelte"],
+			"A platform rhythm game developed for Android and Windows",
+		image: "/src/assets/images/Projects/Zucca.png",
+		category: "gamedev",
+		techStack: ["Unity", "C#", "Maya"],
 		status: "completed",
-		liveDemo: "https://blog.example.com",
-		sourceCode: "https://github.com/example/mizuki",
-		startDate: "2024-01-01",
-		endDate: "2024-06-01",
-		featured: true,
-		tags: ["Blog", "Theme", "Open Source"],
+		liveDemo: "https://erym03.itch.io/trick-or-beat",
+		startDate: "2025-09-20",
+		endDate: "2025-10-20",
+		featured: false,
+		tags: ["Gamedev", "Halloween", "Music", "Android"],
+		
 	},
 	{
-		id: "portfolio-website",
-		title: "Personal Portfolio",
+		id: "Castlevania-Remake",
+		title: "DDD-Vania",
 		description:
-			"Personal portfolio website showcasing project experience and technical skills.",
-		image: "",
-		category: "web",
-		techStack: ["React", "Next.js", "TypeScript", "Framer Motion"],
+			"A Castlevania 3D remake of the first Castlevania made in Unity",
+		image: "/src/assets/images/Projects/Vania.png",
+		category: "gamedev",
+		techStack: ["Unity", "C#", "Aseprite", "Magicavoxel"],
 		status: "completed",
-		liveDemo: "https://portfolio.example.com",
-		sourceCode: "https://github.com/example/portfolio",
-		startDate: "2023-09-01",
-		endDate: "2023-12-01",
-		featured: true,
-		tags: ["Portfolio", "React", "Animation"],
+		liveDemo: "https://erym03.itch.io/ddd-vania",
+		startDate: "2024-12-20",
+		endDate: "2025-02-16",
+		featured: false,
+		tags: ["Gamedev", "Castlevania", "Remake", "Unity3D"],
+		
 	},
 	{
-		id: "task-manager-app",
-		title: "Task Manager App",
+		id: "Platform-Game",
+		title: "Cable the Pirate Robot",
 		description:
-			"Cross-platform task management application supporting team collaboration and project management.",
-		image: "",
-		category: "mobile",
-		techStack: ["React Native", "TypeScript", "Redux", "Firebase"],
-		status: "in-progress",
+			"A 3D platformer inspired by classic platformers from the PS1 and PS2 era.",
+		image: "/src/assets/images/Projects/Cable.png",
+		category: "gamedev",
+		techStack: ["Unity", "C#", "Maya"],
+		status: "completed",
 		startDate: "2024-03-01",
-		tags: ["Mobile", "Productivity", "Team Collaboration"],
-	},
-	{
-		id: "data-visualization-tool",
-		title: "Data Visualization Tool",
-		description:
-			"Data visualization tool supporting multiple chart types and interactive analysis.",
-		image: "",
-		category: "web",
-		techStack: ["Vue.js", "D3.js", "TypeScript", "Node.js"],
-		status: "completed",
-		liveDemo: "https://dataviz.example.com",
-		startDate: "2023-06-01",
-		endDate: "2023-11-01",
-		tags: ["Data Visualization", "Analytics", "Charts"],
-	},
-	{
-		id: "e-commerce-platform",
-		title: "E-commerce Platform",
-		description:
-			"Full-stack e-commerce platform including user management, product management, and order processing features.",
-		image: "",
-		category: "web",
-		techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-		status: "planned",
-		startDate: "2024-07-01",
-		tags: ["E-commerce", "Full Stack", "Payment Integration"],
+		endDate: "2024-06-11",
+		tags: ["Gamedev", "Platform", "Retro", "Platformer"],
 	},
 ];
 
