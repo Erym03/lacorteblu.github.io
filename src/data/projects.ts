@@ -23,7 +23,7 @@ export const projectsData: Project[] = [
 		title: "Trick or Beat",
 		description:
 			"A platform rhythm game developed for Android and Windows",
-		image: "https://erym03.github.io/lacorteblu.github.io/assets/Projects/Vania.png",
+		image: "https://erym03.github.io/lacorteblu.github.io/assets/Projects/Zucca.png",
 		category: "gamedev",
 		techStack: ["Unity", "C#", "Maya"],
 		status: "completed",
@@ -39,7 +39,7 @@ export const projectsData: Project[] = [
 		title: "DDD-Vania",
 		description:
 			"A Castlevania 3D remake of the first Castlevania made in Unity",
-		image: "/public/assets/Projects/Vania.png",
+		image: "https://erym03.github.io/lacorteblu.github.io/assets/Projects/Vania.png",
 		category: "gamedev",
 		techStack: ["Unity", "C#", "Aseprite", "Magicavoxel"],
 		status: "completed",
@@ -55,7 +55,7 @@ export const projectsData: Project[] = [
 		title: "Cable the Pirate Robot",
 		description:
 			"A 3D platformer inspired by classic platformers from the PS1 and PS2 era.",
-		image: "/src/assets/images/Projects/Cable.png",
+		image: "https://erym03.github.io/lacorteblu.github.io/assets/Projects/Cable.png",
 		category: "gamedev",
 		techStack: ["Unity", "C#", "Maya"],
 		status: "completed",
