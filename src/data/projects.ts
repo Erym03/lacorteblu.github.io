@@ -18,6 +18,7 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
+	//Gamedev
 	{
 		id: "TrickOrBeat",
 		title: "Trick or Beat",
@@ -63,6 +64,24 @@ export const projectsData: Project[] = [
 		endDate: "2024-06-11",
 		tags: ["Gamedev", "Platform", "Retro", "Platformer"],
 	},
+
+
+	//WEB
+	{
+		id: "Worldbuilding",
+		title: "Unlimited Worlds",
+		description:
+			"A wordlbuilding platform developed for writers and dungeon masters.",
+		image: "https://erym03.github.io/lacorteblu.github.io/assets/Projects/Worlds.jpg",
+		category: "web",
+		techStack: ["MDBootstrap", "PHP", "SQL"],
+		status: "completed",
+		startDate: "2022-01-01",
+		endDate: "2022-09-20",
+		tags: ["Webdevelopment", "Wordlbuilding", "Writing"],
+	},
+
+
 ];
 
 // Get project statistics
